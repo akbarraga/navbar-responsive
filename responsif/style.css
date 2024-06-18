@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' sans-serif;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+img{
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0 10px 30px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: rgb(104, 100, 100);
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+nav .logo a{
+    color: white;
+    font-size: 24px;
+    font-weight: bold; 
+}
+
+nav .logo a:hover{
+    color: #00ffb3;
+    transition: all 0.3s ease-in-out;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-link{
+    margin-right: 10px;
+}
+
+nav .nav-link a{
+    transition: color 0.4s ease-in;
+    color: rgb(255, 255, 255);
+}
+
+nav .nav-link a:hover,
+nav .nav-link a.selected{
+    color: #00ffb3;
+    background-color: rgba(255, 255, 255, 0.39);
+    border-radius: 5px;
+}
+
+.menu-icon{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+    nav{
+        flex-wrap: wrap;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    
+    nav ul{
+        padding: 1rem;
+        gap: 1rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav ul.hidden{
+        display: none;
+    }
+
+    .menu-icon{
+        display: flex;
+        align-items: center;
+        font-size: 32px;
+    }
+}
